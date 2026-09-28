@@ -1,17 +1,27 @@
 package com.omda.jobra.company.controller;
 
 
+import com.omda.jobra.entity.Company;
+import com.omda.jobra.service.ICompanyService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/companies")
+@RequiredArgsConstructor
 public class CompanyController {
 
+    private final ICompanyService companyService;
+
     @GetMapping(version = "1.0")
-    public ResponseEntity<String> getCompanies() {
-        return ResponseEntity.ok().body("Companies list");
+    public ResponseEntity<List<Company>> getCompanies() {
+
+        List<Company> companyList = companyService.getAllCompanies();
+        return ResponseEntity.ok().body(companyList);
     }
 }
