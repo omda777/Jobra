@@ -1,10 +1,10 @@
 package com.omda.jobra.service;
 
-import com.omda.jobra.entity.Company;
+import com.omda.jobra.dto.CompanyDto;
 
 import java.util.List;
 
 public interface ICompanyService {
 
-    List<Company> getAllCompanies ();
+    List<CompanyDto> getAllCompanies ();
 }
