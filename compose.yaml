@@ -2,6 +2,7 @@ services:
   dbservice:
     image: mysql:latest
     container_name: jobradb
+    entrypoint: ["sh", "-c", "rm -f /var/lib/mysql/mysql.sock /var/lib/mysql/mysql.sock.lock; exec docker-entrypoint.sh mysqld --socket=/var/run/mysqld/mysqld.sock"]
     ports:
       - "3306:3306"
     environment:
@@ -9,4 +10,3 @@ services:
       MYSQL_DATABASE: jobra
     volumes:
       - ~/docker-data/mysql:/var/lib/mysql:Z
-
