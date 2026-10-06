@@ -1,4 +1,4 @@
-package com.omda.jobra.service;
+package com.omda.jobra.company.service;
 
 import com.omda.jobra.dto.CompanyDto;
 

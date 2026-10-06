@@ -2,10 +2,9 @@ package com.omda.jobra.company.controller;
 
 
 import com.omda.jobra.dto.CompanyDto;
-import com.omda.jobra.service.ICompanyService;
+import com.omda.jobra.company.service.ICompanyService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

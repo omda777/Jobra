@@ -1,9 +1,9 @@
-package com.omda.jobra.service.impl;
+package com.omda.jobra.company.service.impl;
 
 import com.omda.jobra.dto.CompanyDto;
 import com.omda.jobra.entity.Company;
 import com.omda.jobra.repository.CompanyRepository;
-import com.omda.jobra.service.ICompanyService;
+import com.omda.jobra.company.service.ICompanyService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
