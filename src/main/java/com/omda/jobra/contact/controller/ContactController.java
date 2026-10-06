@@ -3,6 +3,7 @@ package com.omda.jobra.contact.controller;
 
 import com.omda.jobra.contact.service.IContactService;
 import com.omda.jobra.dto.ContactRequestDto;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +18,7 @@ public class ContactController {
 
     @PostMapping(version = "1.0")
     public ResponseEntity<String> saveContactMsg(
-            @RequestBody ContactRequestDto contactRequestDto
+            @RequestBody @Valid ContactRequestDto contactRequestDto
             ){
 
         boolean isSaved = contactService.saveContact(contactRequestDto);
