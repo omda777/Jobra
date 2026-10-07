@@ -30,10 +30,6 @@ public class ContactService implements IContactService {
     private Contact transformContactRequestDto(ContactRequestDto contactRequestDto) {
         Contact contact = new Contact();
         BeanUtils.copyProperties(contactRequestDto, contact);
-        contact.setCreatedAt(Instant.now());
-        contact.setUpdatedAt(Instant.now());
-        contact.setCreatedBy("system");
-        contact.setUpdatedBy("system");
         contact.setStatus("NEW");
         return contact;
     }
